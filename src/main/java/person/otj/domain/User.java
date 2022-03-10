@@ -1,4 +1,4 @@
-package domain;
+package person.otj.domain;
 
 public class User {
     private String id;
