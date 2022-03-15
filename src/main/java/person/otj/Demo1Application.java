@@ -1,4 +1,4 @@
-package person.otj.demo1;
+package person.otj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
