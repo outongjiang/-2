@@ -24,6 +24,7 @@ public class StudentController {
         System.out.println(password);
         return modelAndView;
     }
+
     @RequestMapping(value = "/test")
     public String test(String data){
         System.out.println(data);
