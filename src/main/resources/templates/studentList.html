@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        window.onload=function() {
+            var app=new Vue({
+                el:".message",
+                data:{
+                    username:"outongjiang"
+                },
+                methods:{
+                    send:function () {
+                        axios.post("http://localhost:8081/student/test?data=data").then(function (response) {
+                            console.log(response);
+                        }).catch(function (error) {
+                            console.log(error);
+                        });
+                    }
+                }
+            })
+        }
+    </script>
 </head>
 <body>
-    <h1>studentList</h1>
+
+    <h1>studentList-test</h1>
+
+    <div class="message">
+        <h1 v-text="username"></h1>
+        <button v-on:click="send">测试</button>
+    </div>
 </body>
 </html>
