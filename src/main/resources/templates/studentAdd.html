@@ -12,14 +12,14 @@
 
 <div class="container mt-3">
 
-    <form action="/student/add" method="post">
+    <form action="/student/findAll" method="post">
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Username:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="username">
+            <input type="text" class="form-control"  placeholder="Enter username" name="username">
         </div>
         <div class="mb-3">
             <label for="pwd" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+            <input type="password" class="form-control"  placeholder="Enter password" name="password">
         </div>
         <button type="submit" class="btn btn-primary">添加学生</button>
     </form>

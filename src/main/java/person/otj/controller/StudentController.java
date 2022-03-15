@@ -8,13 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
-    @RequestMapping(value = "/findAll")
-    public String findAll(){
-        return "studentList";
+
+    @RequestMapping(value = "/add")
+    public String add(){
+        return "studentAdd";
     }
 
-    @RequestMapping(value = "/add",method ={ RequestMethod.POST,RequestMethod.GET})
-    public ModelAndView add(String username, String password){
+    @RequestMapping(value = "/findAll",method ={ RequestMethod.POST,RequestMethod.GET})
+    public ModelAndView findAll(String username, String password){
         ModelAndView modelAndView=new ModelAndView();
         modelAndView.setViewName("studentList");
         modelAndView.addObject("username",username);
