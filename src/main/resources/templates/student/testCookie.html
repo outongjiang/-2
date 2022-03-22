@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <div th:each="cookie:${#httpServletRequest.getCookies()}">
+            <div th:if="${!cookie.getName().equals('JSESSIONID')}">
+            <span th:text="${cookie.getName()+' : '+cookie.getValue()}"></span>
+            </div>
+          </div>
+        <span th:text="${'age : '+session.get('age')}"></span>
+        <br>
+        <span th:text="${'req : '+#httpServletRequest.getAttribute('req')}"></span>
+
+</body>
+</html>
